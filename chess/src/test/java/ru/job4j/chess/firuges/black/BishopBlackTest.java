@@ -19,10 +19,10 @@ class BishopBlackTest {
 
     @Test
     void way() {
-//        BishopBlack testBishopBlack = new BishopBlack(Cell.C1);
-//        Cell[] out = testBishopBlack.way(Cell.G5);
-//        Cell[] expected = new Cell[]{Cell.D2, Cell.E3, Cell.F4, Cell.G5};
-//        assertEquals(expected, out);
+        BishopBlack testBishopBlack = new BishopBlack(Cell.C1);
+        Cell[] out = testBishopBlack.way(Cell.G5);
+        Cell[] expected = {Cell.D2, Cell.E3, Cell.F4, Cell.G5};
+        assertArrayEquals(expected, out);
     }
 
     @Test
