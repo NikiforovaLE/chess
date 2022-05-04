@@ -26,7 +26,19 @@ class BishopBlackTest {
     }
 
     @Test
-    void isDiagonal() {
+    @DisplayName("Test isDiagonal when not diagonal then false")
+    void testIsDiagonalWhenNotDiagonalThenFalse() {
+        BishopBlack testBishopBlack = new BishopBlack(Cell.A1);
+        boolean out =testBishopBlack.isDiagonal(testBishopBlack.position(), Cell.E3);
+        assertFalse(out);
+    }
+
+    @Test
+    @DisplayName("Test isDiagonal when diagonal then true")
+    void testIsDiagonalWhenDiagonalThenTrue() {
+        BishopBlack testBishopBlack = new BishopBlack(Cell.A1);
+        boolean out =testBishopBlack.isDiagonal(testBishopBlack.position(), Cell.C3);
+        assertTrue(out);
     }
 
     @Test
