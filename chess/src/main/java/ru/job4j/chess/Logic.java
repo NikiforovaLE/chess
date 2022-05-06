@@ -24,9 +24,11 @@ public final class Logic {
 
     private boolean free(Cell[] steps) throws OccupiedCellException {
         for (Figure figure : figures) {
-            for (Cell step : steps) {
-                if (figure.position() == step) {
-                    throw new OccupiedCellException("The cell is occupied");
+            if (figure != null) {
+                for (Cell step : steps) {
+                    if (figure.position() == step) {
+                        throw new OccupiedCellException("Wrong way. Cannot pass through a figure");
+                    }
                 }
             }
         }
